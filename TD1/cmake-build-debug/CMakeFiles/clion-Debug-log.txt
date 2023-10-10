@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/logan/Documents/polytech/S5/prog-c/TD1 Select CMakeLists.txt
