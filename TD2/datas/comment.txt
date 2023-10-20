@@ -1,0 +1,5 @@
+/* foo.c */
+int ident/* comm */ificateur;
+char *s = "/* chaine */";
+1/*/2 3/*/4
+/*1 comm /*2 mentaire 3*/ 4*/
