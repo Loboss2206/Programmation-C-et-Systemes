@@ -58,14 +58,14 @@ int evaluer(char operateur, int operande, ...) {
     return res;
 }
 
-void putint(int n) {
+void put_int(int n) {
     if (n < 0) {
         putchar('-');
         n = -n;
     }
 
     if (n / 10 != 0) {
-        putint(n / 10);
+        put_int(n / 10);
     }
 
     putchar('0' + (n % 10));
@@ -81,7 +81,7 @@ void put_hexa(int n) {
         putchar(int_to_hexa(n / 16));
         n = n % 16;
     }
-    putint(n);
+    put_int(n);
 
 }
 
@@ -95,8 +95,8 @@ void Printf(char format[], ...) {
             switch (format[i+1]) {
                 case 's':
                     str = va_arg(ap, char *);
-                    for (int i=0; i<strlen(str);i++) {
-                        putchar(str[i]);
+                    for (int j=0; j < strlen(str); j++) {
+                        putchar(str[j]);
                     }
                     i++;
                     break;
@@ -109,7 +109,7 @@ void Printf(char format[], ...) {
                     i++;
                     break;
                 case 'd':
-                    putint(va_arg(ap, int));
+                    put_int(va_arg(ap, int));
                     i++;
                     break;
                 case 'f':
