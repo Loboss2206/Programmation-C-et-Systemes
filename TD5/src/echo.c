@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <string.h>
 
 int main(int argc, char *argv[]) {
     int reverse = 0;
@@ -8,6 +7,7 @@ int main(int argc, char *argv[]) {
         reverse = 1;
     }
 
+    printf("%s", argv[1]);
     if (reverse) {
         for (int i = 2; i < argc; i++) {
             for (int j = strlen(argv[i]); j>=0; j--) {
