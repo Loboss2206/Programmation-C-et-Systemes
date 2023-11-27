@@ -1,3 +1,0 @@
-/home/logan/Documents/polytech/S5/prog-c/TD1/cmake-build-debug/CMakeFiles/TD1.dir
-/home/logan/Documents/polytech/S5/prog-c/TD1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/logan/Documents/polytech/S5/prog-c/TD1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
