@@ -13,13 +13,11 @@ int mult(int n, int m) {
 }
 
 int iterate(int (*fct) (int, int), int *tab, int size) {
-    int i = 0, res = 0;
-    if (size < 2) return res;
+    if (size < 2) return *(tab + size);
+    int i=0, res = *(tab+i);
 
-    res = tab[i];
-    while (i < size) {
-        res = fct(res, tab[i+1]);
-        i++;
+    while (i++ < size-1) {
+        res = fct(res, *(tab+i));
     }
 
     return res;
@@ -28,5 +26,5 @@ int iterate(int (*fct) (int, int), int *tab, int size) {
 int main(int argc, char *argv[]) {
     int size = 5;
     int tab[5] = {1, 6, 3, 4, 5};
-    printf("Result: %d", iterate(max, tab, size));
+    printf("Result: %d", iterate(mult, tab, size));
 }

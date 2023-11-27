@@ -1,18 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-push_item pour ajouter un élément au sommet de la pile;
- pop_item pour enlever un élément de la pile (c’est-à-dire le dernier élément qui a été empilé) ;
- top_value qui renvoie l’entier en sommet de pile (sans l’enlever de la pile);
- print_stack pour imprimer le contenu de la pile.
-*/
-
-struct element {
+typedef struct element {
     int valeur;
     struct element *suivant;
-};
-typedef struct element Element;
+} Element;
 
 void push_item(Element **stack, int val) {
     if (*stack == NULL) {
@@ -32,6 +24,9 @@ void pop_item(Element **stack) {
         Element *tmp = *stack;
         *stack = (*stack)->suivant;
         free(tmp);
+    }
+    else {
+        fprintf(stderr, "Allocation failed\n");
     }
 }
 

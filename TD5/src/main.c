@@ -26,6 +26,7 @@ char *strdup(const char *s) {
 
 char *strchr(const char *s, int c) {
     while (*++s != c);
+    if (!*s) return NULL;
     return (char *)s;
 }
 
@@ -48,7 +49,7 @@ int main() {
         free(new);
     }
 
-    printf("%s", strchr(s, 'e'));
+    printf("%s", strchr(s, 'p'));
 
     return 0;
 }
